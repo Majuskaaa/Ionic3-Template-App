@@ -13,16 +13,5 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-calendar>
-    <button ion-item (click)="goToToday()">
-      Můj dnešní den
-    </button>
-    <button ion-item>
-        Tipy a doporučení pro dnešní den
-      </button>
-      <button ion-item>
-          Kalendář
-        </button>   
-
-  </ion-calendar>
+    {{ day?.date | date | date: "MMMM"}}
 </ion-content>

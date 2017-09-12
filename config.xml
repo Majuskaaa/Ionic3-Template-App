@@ -87,4 +87,5 @@
         <variable name="APP_ID" value="1428865703833472" />
         <variable name="APP_NAME" value="Angular Workshop" />
     </plugin>
+    <plugin name="cordova-plugin-calendar" spec="^4.6.0" />
 </widget>
