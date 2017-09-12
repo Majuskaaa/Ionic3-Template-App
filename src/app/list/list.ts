@@ -40,6 +40,11 @@ export class ListPage {
     this.navCtrl.push("CalendarPage");
   }
 
+  goToTips() {
+    this.navCtrl.push("TipsPage");
+  }
+
+
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
   }
