@@ -7,10 +7,10 @@ import { DayModel } from '../core/day.model'
 
 @IonicPage()
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html',
+  selector: 'page-calendar',
+  templateUrl: 'calendar.html',
 })
-export class ListPage {
+export class CalendarPage {
 
   public userProfile: UserModel;
   public uid: string = "";

@@ -36,6 +36,10 @@ export class ListPage {
     this.navCtrl.push("TodayPage");
   }
 
+  goToCalendar() {
+    this.navCtrl.push("CalendarPage");
+  }
+
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
   }
