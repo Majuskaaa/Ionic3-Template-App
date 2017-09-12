@@ -3,9 +3,6 @@
     <ion-title> {{ day?.date | date | date: "d. MMMM y"}} </ion-title>
     <ion-title> {{ day?.date | date | date: "EEEE"}} </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="chevron-left"></ion-icon>
-      </button>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
       </button>
@@ -18,11 +15,10 @@
       Můj dnešní den
     </button>
     <button ion-item>
-        Tipy a doporučení pro dnešní den
-      </button>
-      <button ion-item>
-          Kalendář
-        </button>   
-
+      Tipy a doporučení pro dnešní den
+    </button>
+    <button ion-item (click)="goToCalendar()">
+      Kalendář
+    </button>   
   </ion-list>
 </ion-content>
