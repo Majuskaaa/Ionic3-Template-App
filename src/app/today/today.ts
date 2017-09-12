@@ -7,10 +7,10 @@ import { DayModel } from '../core/day.model'
 
 @IonicPage()
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html',
+  selector: 'page-today',
+  templateUrl: 'today.html',
 })
-export class ListPage {
+export class TodayPage {
 
   public userProfile: UserModel;
   public uid: string = "";
@@ -30,10 +30,6 @@ export class ListPage {
       this.userProfile = user;
       this.uid = user.uid;
     });
-  }
-
-  goToToday() {
-    this.navCtrl.push("TodayPage");
   }
 
   logout() {
