@@ -14,7 +14,9 @@ export class ListPage {
 
   public userProfile: UserModel;
   public uid: string = "";
-  public day: DayModel;
+  public day: DayModel = {
+    "date": new Date()
+  };
 
   constructor(
     public navCtrl: NavController, 
@@ -28,10 +30,6 @@ export class ListPage {
       this.userProfile = user;
       this.uid = user.uid;
     });
-    this.day = {
-      "date": new Date()
-    }
-    console.log(this.day)
   }
 
   logout() {
