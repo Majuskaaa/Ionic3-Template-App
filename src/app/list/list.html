@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ userProfile?.displayName?.split(" ")[0] }} ToDo</ion-title>
+    <ion-title> {{ day?.date | date }}</ion-title>
     <ion-buttons end>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
@@ -9,5 +9,5 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  Hello Universe!
+  Hello Universe! 
 </ion-content>

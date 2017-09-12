@@ -3,6 +3,7 @@ import { NavController, IonicPage } from 'ionic-angular';
 
 import { AuthService } from '../core/auth.service';
 import { UserModel } from '../core/user.model'
+import { DayModel } from '../core/day.model'
 
 @IonicPage()
 @Component({
@@ -13,6 +14,7 @@ export class ListPage {
 
   public userProfile: UserModel;
   public uid: string = "";
+  public day: DayModel;
 
   constructor(
     public navCtrl: NavController, 
@@ -26,6 +28,10 @@ export class ListPage {
       this.userProfile = user;
       this.uid = user.uid;
     });
+    this.day = {
+      "date": new Date()
+    }
+    console.log(this.day)
   }
 
   logout() {
