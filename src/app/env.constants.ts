@@ -1,11 +1,11 @@
 export const Config = {
   firebase: {
-    apiKey: "AIzaSyA8Bk08xHF6Ra-Eiv8FrO9xaY17x07vbFk",
-    authDomain: "angular4-workshop.firebaseapp.com",
-    databaseURL: "https://angular4-workshop.firebaseio.com",
-    projectId: "angular4-workshop",
-    storageBucket: "angular4-workshop.appspot.com",
-    messagingSenderId: "127243035046"
+    apiKey: "AIzaSyA2UUVMo1SWNTMRRycJb9hmSUk79GpmV8M",
+    authDomain: "manual-na-zeny.firebaseapp.com",
+    databaseURL: "https://manual-na-zeny.firebaseio.com",
+    projectId: "manual-na-zeny",
+    storageBucket: "manual-na-zeny.appspot.com",
+    messagingSenderId: "574120678913"
   },
   google_web_client_id: "904616137099-730tr4g3m6mhfldojejlren97nk3ckod.apps.googleusercontent.com",
   firebase_tables: {
