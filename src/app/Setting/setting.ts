@@ -44,6 +44,9 @@ export class SettingPage {
     this.navCtrl.push("TipsPage");
   }
 
+  goToList() {
+    this.navCtrl.push("ListPage");
+  }
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
