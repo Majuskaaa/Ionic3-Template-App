@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { SharedModule } from '../shared/shared.module';
-import { MenListPage } from './menList';
+import { MenCalendarPage } from './menCalendar';
 
 @NgModule({
   imports: [
     SharedModule,
-    IonicPageModule.forChild(MenListPage)
+    IonicPageModule.forChild(MenCalendarPage)
   ],
   declarations: [
-    MenListPage
+    MenCalendarPage
   ],
   entryComponents: [
-    MenListPage
+    MenCalendarPage
   ]
 })
-export class MenListPageModule { }
+export class MenCalendarPageModule { }

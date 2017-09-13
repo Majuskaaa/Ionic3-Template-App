@@ -7,10 +7,10 @@ import { DayModel } from '../core/day.model'
 
 @IonicPage()
 @Component({
-  selector: 'page-menList',
-  templateUrl: 'menList.html',
+  selector: 'page-menCalendar',
+  templateUrl: 'menCalendar.html',
 })
-export class MenListPage {
+export class MenCalendarPage {
 
   public userProfile: UserModel;
   public uid: string = "";
@@ -32,22 +32,13 @@ export class MenListPage {
     });
   }
 
-  goToMenToday() {
-    this.navCtrl.push("MenTodayPage");
+  goToToday() {
+    this.navCtrl.push("TodayPage");
   }
 
-  goToMenCalendar() {
-    this.navCtrl.push("MenCalendarPage");
+  goToList() {
+    this.navCtrl.push("ListPage");
   }
-
-  goToMenTips() {
-    this.navCtrl.push("MenTipsPage");
-  }
-
-  goToMenSetting() {
-    this.navCtrl.push("MenSettingPage");
-  }
-
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
