@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> {{ day?.date | date | date: "d. MMMM y"}} </ion-title>
-    <ion-title> {{ day?.date | date | date: "EEEE"}} </ion-title>
+      <ion-title> {{ day?.date | date | date: "d."}} {{ day?.date | date | date: "MMMM" | translate }} {{ day?.date | date | date: "y"}} </ion-title>
+      <ion-title> {{ day?.date | date | date: "EEEE" | translate }} </ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
         <ion-icon name="chevron-left"></ion-icon>
@@ -15,18 +15,18 @@
 <ion-content>
     <ion-item>
         <ion-label> Ovulace </ion-label>
-        <ion-toggle disabled checked="false"></ion-toggle>
+        <ion-toggle checked="false" color="green"></ion-toggle>
       </ion-item>
       <ion-item>
           <ion-label> Menstruace </ion-label>
-          <ion-toggle disabled checked="false"></ion-toggle>
+          <ion-toggle checked="false" color="danger"></ion-toggle>
         </ion-item>
         <ion-item>
-            <ion-label> Hmotnost </ion-label>
+            <ion-label fixed> Hmotnost </ion-label>
             <ion-input type="number"></ion-input>
         </ion-item>
         <ion-item>
-           <ion-label> Bazální teplota </ion-label>
+           <ion-label fixed> Bazální teplota </ion-label>
            <ion-input type="number"></ion-input>
         </ion-item>
 </ion-content>
