@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-navbar>
       <ion-buttons start>
           <button ion-button icon-only>
             <ion-icon name="arrow-back" click="goToList"></ion-icon>
@@ -8,15 +8,12 @@
       <ion-title> {{ day?.date | date | date: "d."}} {{ day?.date | date | date: "MMMM" | translate }} {{ day?.date | date | date: "y"}} </ion-title>
       <ion-title> {{ day?.date | date | date: "EEEE" | translate }} </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon name="chevron-left"></ion-icon>
-      </button>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 <ion-content>
-    {{ day?.date | date | date: "MMMM" | translate}}
+  {{ day?.date | date | date: "MMMM" | translate}}
 </ion-content>
