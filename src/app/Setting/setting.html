@@ -1,15 +1,40 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title> Nastavení </ion-title>
     <ion-buttons end>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 <ion-content>
   <ion-list>
-    Tady bude stránka k nastavení profilu
+    <ion-item>
+      <ion-label floating>Jméno</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Věk</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Průměrná délka cyklu</ion-label>
+      <ion-input type="number"></ion-input>
+      <ion-badge item-end>dní</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Průměrná délka menstruace</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sleduji ovulaci</ion-label>
+      <ion-toggle checked="true" color="green"></ion-toggle>
+    </ion-item>
   </ion-list>
 </ion-content>
