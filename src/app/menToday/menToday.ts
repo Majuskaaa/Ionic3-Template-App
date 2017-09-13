@@ -36,7 +36,7 @@ export class MenTodayPage {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
   }
 
-  goToList () {
-    this.navCtrl.push("ListPage");
+  goToList() {
+    this.navCtrl.push("MenListPage");
   }
 }

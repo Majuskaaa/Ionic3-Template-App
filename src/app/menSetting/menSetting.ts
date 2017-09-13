@@ -32,20 +32,9 @@ export class MenSettingPage {
     });
   }
 
-  goToToday() {
-    this.navCtrl.push("TodayPage");
-  }
-
-  goToCalendar() {
-    this.navCtrl.push("CalendarPage");
-  }
-
-  goToTips() {
-    this.navCtrl.push("TipsPage");
-  }
-
-  goToList() {
-    this.navCtrl.push("ListPage");
+  
+  goToMenList() {
+    this.navCtrl.push("MenListPage");
   }
 
   logout() {

@@ -39,12 +39,9 @@ export class MenTipsPage {
     this.tip = this.menTips[this.type]
   }
 
-  goToToday() {
-    this.navCtrl.push("TodayPage");
-  }
 
-  goToList() {
-    this.navCtrl.push("ListPage");
+  goToMenList() {
+    this.navCtrl.push("MenListPage");
   }
 
   logout() {
