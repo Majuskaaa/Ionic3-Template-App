@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-toolbar text-center color="">
+  <ion-toolbar text-center>
     <ion-buttons left>
       <button ion-button icon-only>
-        <ion-icon name="arrow-back" (click)="goToMenList()"></ion-icon>
+        <ion-icon name="arrow-back" (click)="goToList"></ion-icon>
       </button>
     </ion-buttons>
       <ion-title> {{ day?.date | date | date: "d."}} {{ day?.date | date | date: "MMMM" | translate }} {{ day?.date | date | date: "y"}} </ion-title>
@@ -15,15 +15,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  {{ day?.date | date | date: "MMMM" | translate}}
-  <ion-list>
     <ion-item>
-      <ion-icon name="leaf" item-start></ion-icon>
-        Herbology
+      Zde si bude muž značit své poznatky k tomuto dni ohledně své ženy
     </ion-item>
-    <ion-item>
-      <ion-icon name="beer" item-start></ion-icon>
-        Herbology
-    </ion-item>
-  </ion-list>
 </ion-content>
