@@ -1,8 +1,8 @@
 <ion-header>
-  <ion-navbar>
-    <ion-buttons start>
+  <ion-toolbar text-center>
+    <ion-buttons left>
       <button ion-button icon-only>
-        <ion-icon name="arrow-back" click="goToList"></ion-icon>
+        <ion-icon name="arrow-back" (click)="goToList()"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title> Nastavení </ion-title>
@@ -11,7 +11,7 @@
         <ion-icon name="log-out"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-list>
