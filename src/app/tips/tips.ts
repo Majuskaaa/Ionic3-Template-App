@@ -17,6 +17,11 @@ export class TipsPage {
   public day: DayModel = {
     "date": new Date()
   };
+  public type: string = "jaro";
+  public tip: string;
+  public tips: any = {
+    "jaro": "Fáze cyklu je příznivě nakloněna detoxikaci organismu. Toho dosáhnete nejlépe cvičením horké jógy a konzumací potravin s vysokým podílem vitamínů a živin. :-)"
+  };
 
   constructor(
     public navCtrl: NavController, 
@@ -30,6 +35,7 @@ export class TipsPage {
       this.userProfile = user;
       this.uid = user.uid;
     });
+    this.tip = this.tips[this.type]
   }
 
   goToToday() {

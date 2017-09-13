@@ -1,7 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> {{ day?.date | date | date: "d. MMMM y"}} </ion-title>
-    <ion-title> {{ day?.date | date | date: "EEEE"}} </ion-title>
+    <ion-title> {{ day?.date | date | date: "d."}} {{ day?.date | date | date: "MMMM" | translate}} {{ day?.date | date | date: "y"}} </ion-title>
+    <ion-title> {{ day?.date | date | date: "EEEE" | translate}} </ion-title>
+    
     <ion-buttons end>
       <button ion-button icon-only>
         <ion-icon name="chevron-left"></ion-icon>
@@ -13,7 +14,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-{{showTip(
-  name: Leto
-)}}
+    <ion-card>
+        
+          <ion-card-header>
+            Tipy a doporučení pro dnešní den
+          </ion-card-header>
+        
+          <ion-card-content>
+              {{tip}} 
+          </ion-card-content>
+        
+        </ion-card>
+
 </ion-content>
+
