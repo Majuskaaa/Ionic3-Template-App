@@ -21,7 +21,7 @@ export class TipsPage {
   public tip: string;
   public tips: any = {
     "jaro": "Fáze cyklu je příznivě nakloněna detoxikaci organismu. Toho dosáhnete nejlépe cvičením horké jógy a konzumací potravin s vysokým podílem vitamínů a živin. :-)",
-"podzim": "V tomto období si dopřejete lehou sportovní aktivitu, např. jízdu na kole. Hodně relaxujte a jezte potrviny ohaté na železo. Výborný tip je čaj z levandule a aromaterapie. Vyhýbejte se konfliktním situacím."
+"podzim": "V tomto období si dopřejete lehou sportovní aktivitu, např. jízdu na kole. Hodně relaxujte a jezte potrviny bohaté na železo. Výborný tip je čaj z levandule a aromaterapie. Vyhýbejte se konfliktním situacím.",
   };
 
   constructor(
