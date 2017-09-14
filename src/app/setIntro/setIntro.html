@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar text-center>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="goToList()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title> Nastavení </ion-title>
+    <ion-buttons end>
+      <button ion-button color="danger" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Jméno</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Věk</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Průměrná délka cyklu</ion-label>
+      <ion-input type="number"></ion-input>
+      <ion-badge item-end>dní</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Průměrná délka menstruace</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sleduji ovulaci</ion-label>
+      <ion-toggle checked="true" color="green"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar text-center>
+        <ion-buttons>
+            <button ion-button>
+              Uložit
+            </button>
+          </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
+
+
