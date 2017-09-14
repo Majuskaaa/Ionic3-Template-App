@@ -2,7 +2,7 @@
   <ion-toolbar text-center>
     <ion-buttons left>
       <button ion-button icon-only>
-        <ion-icon name="arrow-back" (click)="goToMenList"></ion-icon>
+        <ion-icon name="arrow-back" (click)="goToMenList()"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title> {{ day?.date | date | date: "d."}} {{ day?.date | date | date: "MMMM" | translate}} {{ day?.date | date | date: "y"}} </ion-title>
@@ -16,7 +16,7 @@
     </ion-title>
     <ion-buttons right>
       <button ion-button icon-only>
-        <ion-icon name="arrow-forward" (click)="goToMenList"></ion-icon>
+        <ion-icon name="arrow-forward" (click)="goToMenList()"></ion-icon>
       </button>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>

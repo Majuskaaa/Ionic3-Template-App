@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, ViewController } from 'ionic-angular';
 
 import { AuthService } from '../core/auth.service';
 import { UserModel } from '../core/user.model'
@@ -21,6 +21,7 @@ export class ListPage {
   constructor(
     public navCtrl: NavController, 
     public authService: AuthService,
+    public viewCtrl: ViewController
   ) {
     
   }
@@ -30,6 +31,8 @@ export class ListPage {
     this.authService.getFullProfile().subscribe((user) => {
       this.userProfile = user;
       this.uid = user.uid;
+      if(!this.navCtrl.isActive(this.viewCtrl))
+      return;
       if (!this.userProfile.gender) {
         this.goToIntro();
       }
@@ -37,7 +40,6 @@ export class ListPage {
         this.goToMenList();
       } 
     });
-
   }
 
   goToToday() {

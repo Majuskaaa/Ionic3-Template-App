@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
+import { NavController, IonicPage, ViewController} from 'ionic-angular';
 
 import { AuthService } from '../core/auth.service';
 import { UserModel } from '../core/user.model'
@@ -21,6 +21,7 @@ export class SetIntroPage {
   constructor(
     public navCtrl: NavController, 
     public authService: AuthService,
+    public viewCtrl: ViewController
   ) {
     
   }
@@ -30,6 +31,22 @@ export class SetIntroPage {
       this.userProfile = user;
       this.uid = user.uid;
     });
+  }
+
+  ionViewWillEnter() {
+    this.authService.getFullProfile().subscribe((user) => {
+      this.userProfile = user;
+      this.uid = user.uid;
+      if(!this.navCtrl.isActive(this.viewCtrl))
+        return;
+      if (!this.userProfile.gender) {
+        this.goToIntro();
+      }
+      else if(this.userProfile.gender==='M') {
+        this.goToMenSetIntro();
+      } 
+    });
+
   }
 
   goToToday() {
@@ -48,8 +65,21 @@ export class SetIntroPage {
     this.navCtrl.push("ListPage");
   }
 
+  goToIntro() {
+    this.navCtrl.push("IntroPage");
+  }
+
+
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
+  }
+
+  goToMenSetIntro() {
+    this.navCtrl.push("MenSetIntroPage");
+  }
+
+  goToAgreeIntro() {
+    this.navCtrl.push("AgreeIntroPage");
   }
 
 }

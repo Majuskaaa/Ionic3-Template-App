@@ -73,7 +73,11 @@ export class IntroPage {
   setGender(gender:string) {
     this.userProfile.gender=gender;
     this.authService.updateProfile(this.userProfile).then(()=>{
-      this.navCtrl.push("ListPage");
+      console.log(this.userProfile.gender)
+      if(this.userProfile.gender === "M")
+        this.navCtrl.setRoot("MenSetIntroPage");
+      else if(this.userProfile.gender === "F")
+        this.navCtrl.setRoot("SetIntroPage");
     });
   }
 
