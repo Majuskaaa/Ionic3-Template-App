@@ -22,11 +22,19 @@
       <ion-label> Zasílat upozornění při synchronizaci </ion-label>
       <ion-toggle checked="true" color="green"></ion-toggle>
     </ion-item>
+    <ion-item>
+        <ion-label>Jazyk aplikace</ion-label>
+        <ion-select [(ngModel)]="language">
+          <ion-option value="czech" selected>čeština</ion-option>
+          <ion-option value="english">english</ion-option>
+          <ion-option value="deutsch">deutsch</ion-option>
+        </ion-select>
+  </ion-item>
 </ion-content>
 <ion-footer>
     <ion-toolbar text-center>
         <ion-buttons>
-            <button ion-button>
+            <button ion-button (click)="goToMenList()">
               Uložit
             </button>
           </ion-buttons>
