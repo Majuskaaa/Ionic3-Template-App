@@ -53,6 +53,10 @@ export class AgreeIntroPage {
     this.navCtrl.push("SettingPage");
   }
 
+  goToList() {
+    this.navCtrl.push("ListPage");
+  }
+
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));

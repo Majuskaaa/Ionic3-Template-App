@@ -53,6 +53,10 @@ export class MenAgreeIntroPage {
     this.navCtrl.push("SettingPage");
   }
 
+  goToMenList() {
+    this.navCtrl.push("MenListPage");
+  }
+
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
