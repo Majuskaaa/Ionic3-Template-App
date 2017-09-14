@@ -48,6 +48,10 @@ export class ListPage {
     this.navCtrl.push("SettingPage");
   }
 
+  goToInfo() {
+    this.navCtrl.push("InfoPage");
+  }
+
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));

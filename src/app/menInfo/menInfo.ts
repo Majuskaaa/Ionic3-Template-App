@@ -5,15 +5,12 @@ import { AuthService } from '../core/auth.service';
 import { UserModel } from '../core/user.model'
 import { DayModel } from '../core/day.model'
 
-import { AlertController } from 'ionic-angular';
-
 @IonicPage()
 @Component({
-  selector: 'page-intro',
-  templateUrl: 'intro.html',
+  selector: 'page-menInfo',
+  templateUrl: 'menInfo.html',
 })
-export class IntroPage {
-  
+export class MenInfoPage {
 
   public userProfile: UserModel;
   public uid: string = "";
@@ -24,7 +21,6 @@ export class IntroPage {
   constructor(
     public navCtrl: NavController, 
     public authService: AuthService,
-    public alertCtrl: AlertController,
   ) {
     
   }
@@ -33,38 +29,16 @@ export class IntroPage {
     this.authService.getFullProfile().subscribe((user) => {
       this.userProfile = user;
       this.uid = user.uid;
-      this.showAlert();
     });
   }
 
-  goToToday() {
-    this.navCtrl.push("TodayPage");
-  }
-
-  goToCalendar() {
-    this.navCtrl.push("CalendarPage");
-  }
-
-  goToTips() {
-    this.navCtrl.push("TipsPage");
-  }
-
-  goToSetting() {
-    this.navCtrl.push("SettingPage");
+  goToMenList() {
+    this.navCtrl.push("MenListPage");
   }
 
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));
-  }
-
-  showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'Vítejte!',
-      subTitle: 'Pro správné fungování aplikace je třeba vyplnit pár údajů...',
-      buttons: ['Jdeme na to!']
-    });
-    alert.present();
   }
 
 }

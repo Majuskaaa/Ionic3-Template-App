@@ -48,6 +48,10 @@ export class MenListPage {
     this.navCtrl.push("MenSettingPage");
   }
 
+  goToMenInfo() {
+    this.navCtrl.push("MenInfoPage");
+  }
+
 
   logout() {
     this.authService.signOut().then(() => this.navCtrl.setRoot('AuthPage'));

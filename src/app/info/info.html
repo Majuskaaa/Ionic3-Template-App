@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar text-center>
-    <ion-title>Úvodní informace a nastavení</ion-title>
+      <ion-buttons left>
+          <button ion-button icon-only (click)="goToList()">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>O aplikaci</ion-title>
     <ion-buttons>
       <button ion-button color="danger" (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
@@ -9,11 +14,5 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  Jsem
-  <button ion-button icon-left>
-      Žena 
-    </button>
-    <button ion-button icon-right>
-      Muž 
-    </button>
+  Zde budou informace o aplikaci
 </ion-content>
