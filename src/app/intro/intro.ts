@@ -33,8 +33,11 @@ export class IntroPage {
     this.authService.getFullProfile().subscribe((user) => {
       this.userProfile = user;
       this.uid = user.uid;
-      this.showAlert();
     });
+  }
+
+  ionViewDidEnter() {
+      this.showAlert();
   }
 
   goToToday() {
@@ -65,6 +68,13 @@ export class IntroPage {
       buttons: ['Jdeme na to!']
     });
     alert.present();
+  }
+
+  setGender(gender:string) {
+    this.userProfile.gender=gender;
+    this.authService.updateProfile(this.userProfile).then(()=>{
+      this.navCtrl.push("ListPage");
+    });
   }
 
 }

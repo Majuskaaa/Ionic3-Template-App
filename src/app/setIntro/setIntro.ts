@@ -10,7 +10,7 @@ import { DayModel } from '../core/day.model'
   selector: 'page-setIntro',
   templateUrl: 'setIntro.html',
 })
-export class SettingPage {
+export class SetIntroPage {
 
   public userProfile: UserModel;
   public uid: string = "";

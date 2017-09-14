@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { SharedModule } from '../shared/shared.module';
-import { setIntroPage } from './setIntro';
+import { SetIntroPage } from './setIntro';
 
 @NgModule({
   imports: [
     SharedModule,
-    IonicPageModule.forChild(setIntroPage)
+    IonicPageModule.forChild(SetIntroPage)
   ],
   declarations: [
-    setIntroPage
+    SetIntroPage
   ],
   entryComponents: [
-    setIntroPage
+    SetIntroPage
   ]
 })
 export class setIntroPageModule { }

@@ -4,4 +4,5 @@ export class UserModel {
   displayName?: string;
   photoURL?: string;
   providerData?: any;
+  gender?: string;
 }

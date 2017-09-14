@@ -10,10 +10,10 @@
 </ion-header>
 <ion-content>
   Jsem
-  <button ion-button icon-left>
+  <button ion-button icon-left (click)="setGender('F')">
       Žena 
     </button>
-    <button ion-button icon-right>
+    <button ion-button icon-right (click)="setGender('M')">
       Muž 
     </button>
 </ion-content>

@@ -25,11 +25,19 @@ export class ListPage {
     
   }
 
-  ionViewDidLoad() {
+
+  ionViewWillEnter() {
     this.authService.getFullProfile().subscribe((user) => {
       this.userProfile = user;
       this.uid = user.uid;
+      if (!this.userProfile.gender) {
+        this.goToIntro();
+      }
+      else if(this.userProfile.gender==='M') {
+        this.goToMenList();
+      } 
     });
+
   }
 
   goToToday() {
@@ -50,6 +58,14 @@ export class ListPage {
 
   goToInfo() {
     this.navCtrl.push("InfoPage");
+  }
+
+  goToIntro() {
+    this.navCtrl.push("IntroPage");
+  }
+
+  goToMenList() {
+    this.navCtrl.push("MenListPage");
   }
 
 
